@@ -1,0 +1,6 @@
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\bin\Debug\App_Horyn.exe.config
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\bin\Debug\App_Horyn.exe
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\bin\Debug\App_Horyn.pdb
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\obj\Debug\App_Horyn.csprojAssemblyReference.cache
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\obj\Debug\App_Horyn.exe
+F:\MainAcademy\HW_Struct_12.01.2020\App_Horyn\obj\Debug\App_Horyn.pdb

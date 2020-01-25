@@ -1,0 +1,11 @@
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+F:\MainAcademy\Lection 13.01.20\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb

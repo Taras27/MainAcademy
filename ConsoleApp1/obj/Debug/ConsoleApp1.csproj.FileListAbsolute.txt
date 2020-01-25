@@ -1,0 +1,6 @@
+F:\MainAcademy\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+F:\MainAcademy\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\MainAcademy\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\MainAcademy\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\MainAcademy\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\MainAcademy\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

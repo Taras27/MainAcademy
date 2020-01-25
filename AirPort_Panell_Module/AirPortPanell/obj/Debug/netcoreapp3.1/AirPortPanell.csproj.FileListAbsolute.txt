@@ -1,0 +1,11 @@
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.exe
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.deps.json
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.runtimeconfig.json
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.runtimeconfig.dev.json
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.dll
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\bin\Debug\netcoreapp3.1\AirPortPanell.pdb
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\obj\Debug\netcoreapp3.1\AirPortPanell.csprojAssemblyReference.cache
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\obj\Debug\netcoreapp3.1\AirPortPanell.AssemblyInfoInputs.cache
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\obj\Debug\netcoreapp3.1\AirPortPanell.AssemblyInfo.cs
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\obj\Debug\netcoreapp3.1\AirPortPanell.dll
+F:\MainAcademy\AirPort_Panell_Module\AirPortPanell\obj\Debug\netcoreapp3.1\AirPortPanell.pdb

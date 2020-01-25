@@ -1,0 +1,7 @@
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\MainAcademy\12.27.19_Prj\HOMEWORK\ANCETA_CONSOLE\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

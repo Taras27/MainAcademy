@@ -1,0 +1,6 @@
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\MainAcademy\Lection_24.01.20\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

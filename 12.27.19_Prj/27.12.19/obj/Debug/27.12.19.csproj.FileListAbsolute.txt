@@ -1,0 +1,7 @@
+F:\MainAcademy\12.27.19_Prj\27.12.19\bin\Debug\27.12.19.exe.config
+F:\MainAcademy\12.27.19_Prj\27.12.19\bin\Debug\27.12.19.exe
+F:\MainAcademy\12.27.19_Prj\27.12.19\bin\Debug\27.12.19.pdb
+F:\MainAcademy\12.27.19_Prj\27.12.19\obj\Debug\27.12.19.csprojAssemblyReference.cache
+F:\MainAcademy\12.27.19_Prj\27.12.19\obj\Debug\27.12.19.csproj.CoreCompileInputs.cache
+F:\MainAcademy\12.27.19_Prj\27.12.19\obj\Debug\27.12.19.exe
+F:\MainAcademy\12.27.19_Prj\27.12.19\obj\Debug\27.12.19.pdb
