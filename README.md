@@ -1,4 +1,6 @@
-This is my first commit!!!
-
-This is my first commit!!!
+MAIN ACADEMY
+This repos consist of:
+	Lection
+	Laboratory work
+	Home work
 
