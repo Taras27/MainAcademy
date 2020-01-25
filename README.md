@@ -4,3 +4,4 @@ This repos consist of:
 	Laboratory work
 	Home work
 
+This change make Taras Horyn (HP635)
