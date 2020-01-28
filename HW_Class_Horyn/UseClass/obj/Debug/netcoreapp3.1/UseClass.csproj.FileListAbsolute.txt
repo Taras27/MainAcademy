@@ -9,3 +9,14 @@ D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.Assembly
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfo.cs
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.dll
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.pdb
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.exe
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.deps.json
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.runtimeconfig.json
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.runtimeconfig.dev.json
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.dll
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.pdb
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.csprojAssemblyReference.cache
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfoInputs.cache
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfo.cs
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.dll
+F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.pdb

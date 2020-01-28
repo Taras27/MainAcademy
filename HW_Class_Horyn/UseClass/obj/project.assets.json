@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\TARAS\\.nuget\\packages\\": {},
+    "C:\\Users\\111\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MainAcademy\\HW_Class_Horyn\\UseClass\\UseClass.csproj",
+      "projectUniqueName": "F:\\WorkSpace\\MainAcademy\\HW_Class_Horyn\\UseClass\\UseClass.csproj",
       "projectName": "UseClass",
-      "projectPath": "D:\\MainAcademy\\HW_Class_Horyn\\UseClass\\UseClass.csproj",
-      "packagesPath": "C:\\Users\\TARAS\\.nuget\\packages\\",
-      "outputPath": "D:\\MainAcademy\\HW_Class_Horyn\\UseClass\\obj\\",
+      "projectPath": "F:\\WorkSpace\\MainAcademy\\HW_Class_Horyn\\UseClass\\UseClass.csproj",
+      "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
+      "outputPath": "F:\\WorkSpace\\MainAcademy\\HW_Class_Horyn\\UseClass\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\TARAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\111\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
