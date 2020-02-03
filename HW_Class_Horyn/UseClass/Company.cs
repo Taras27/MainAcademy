@@ -4,33 +4,30 @@ using System.Text;
 
 namespace UseClass
 {
-    class Company : ICompany
+    class Company
     {
-        private int QuantityComputer { get; set; }
-        private int Depatment { get; set; }
-        ComputerType Computer { get; set; }
-        public enum ComputerType
+        //відділення
+        // у відділеннях масиви
+        
+        public void CreateDepartmentLaptop (int QuantityComputers, ClassEnum.ComputerType computerType)
         {
-            Desktop = 1,
-            Laptop,
-            Server
-        }
-        public void ComputerAdd (int Depatment,int QuantityComputer, ICompany.ComputerType Computer)
-        {
-            Computer[,] deps = new Computer[4,3];
-
-            switch (Computer)
+            int[,] ArrayLaptop = new int [(int)QuantityComputers, (int)computerType];
+            for(int i=1; i< ArrayLaptop.Length; i++ )
             {
-                case ICompany.ComputerType.Desktop:
-                    deps[Depatment, (int)ComputerType.Desktop] = ComputerAdd(Computer); 
-                    break;
-                case ICompany.ComputerType.Laptop:
-                    deps[Depatment, (int)ComputerType.Laptop] = new Computer();
-                    break;
-                case ICompany.ComputerType.Server:
-                    deps[Depatment, (int)ComputerType.Server] = new Computer();
-                    break;
+                ArrayLaptop[i, (int)computerType] = 
             }
+            //do some here
+        }
+        public void CreateDepartmentDesktop(int QuantityComputers, ClassEnum.ComputerType computerType)
+        {
+
+            //do some here
+        }
+        public void CreateDepartmentServer(int QuantityComputers, ClassEnum.ComputerType computerType)
+        {
+
+            //do some here
         }
     }
+
 }
