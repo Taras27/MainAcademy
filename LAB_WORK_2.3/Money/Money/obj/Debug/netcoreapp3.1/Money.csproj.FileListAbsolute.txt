@@ -1,0 +1,11 @@
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.exe
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.deps.json
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.runtimeconfig.json
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.runtimeconfig.dev.json
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.dll
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\bin\Debug\netcoreapp3.1\Money.pdb
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\obj\Debug\netcoreapp3.1\Money.csprojAssemblyReference.cache
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\obj\Debug\netcoreapp3.1\Money.AssemblyInfoInputs.cache
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\obj\Debug\netcoreapp3.1\Money.AssemblyInfo.cs
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\obj\Debug\netcoreapp3.1\Money.dll
+E:\WorkSpace\MAIN_LESS\HW_MONEY\Money\Money\obj\Debug\netcoreapp3.1\Money.pdb

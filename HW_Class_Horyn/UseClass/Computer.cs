@@ -1,86 +1,78 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static UseClass.ClassEnum;
 using static UseClass.Company;
 
 namespace UseClass
 {
     public class Computer
     {
-        private int QuantityCores { get; set; }
-        private int CoreFrequency { get; set; }
-        private int RamMemory { get; set; }
-        private int CapacityHdd { get; set; }
-        public enum ComputerType
+        private int core;
+        private int ram;
+        private int hdd;
+        private int frequency;
+        private ComputerType type;
+        public int Core
         {
-            Desktop = 1,
-            Laptop,
-            Server
+            get => core;
+            set => core = value;
         }
-
-        public  int SetComputerQC(ComputerType ComputerSet)
+        public int Ram
         {
-            if (ComputerSet == ComputerType.Desktop)
-                return QuantityCores=4;
-            else if (ComputerSet == ComputerType.Laptop)
-                return QuantityCores = 2;
-            else return QuantityCores = 8;
+            get => ram;
+            set => ram = value;
         }
-        public int SetComputerCF(ComputerType ComputerSet)
+        public int Hdd
         {
-            if (ComputerSet == ComputerType.Desktop)
-                return CoreFrequency = 2500;
-            else if (ComputerSet == ComputerType.Laptop)
-                return CoreFrequency = 1700;
-            else return CoreFrequency = 3000;
+            get => hdd;
+            set => hdd = value;
         }
-        public int SetComputerRM(ComputerType ComputerSet)
+        public int Frequency
         {
-            if (ComputerSet == ComputerType.Desktop)
-                return RamMemory = 6;
-            else if (ComputerSet == ComputerType.Laptop)
-                return RamMemory = 4;
-            else return RamMemory = 16;
+            get => frequency;
+            set => frequency = value;
         }
-        public int SetComputerCH(ComputerType ComputerSet)
+        public ComputerType Type
         {
-            if (ComputerSet == ComputerType.Desktop)
-                return CapacityHdd = 500;
-            else if (ComputerSet == ComputerType.Laptop)
-                return CapacityHdd = 250;
-            else return CapacityHdd = 2000;
+            get => type;
+            set => type = value;
+        }    
+        public Computer ()
+        {
+            core = 0;
+            ram = 0;
+            hdd = 0;
+            frequency = 0;            
         }
-
-        public int[] CompAdd (ComputerType ComputerSet)
+        public Computer(int Core, int Ram, int Hdd, int Frequency, ComputerType Type)
         {
-            int[] tmp = new int[4];
-            switch(ComputerSet)
+            type = Type;
+            core = Core;
+            ram = Ram;
+            hdd = Hdd;
+            frequency = Frequency;
+        }
+        public static void ShowInfo(Computer computer)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Computer type: {computer.type.ToString()}");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"\tQuantity cores: {computer.core}");
+            Console.WriteLine($"\tFrequency: {computer.frequency}");
+            Console.WriteLine($"\tHDD capacity: {computer.hdd}");
+            Console.WriteLine($"\tRAM quantity: {computer.ram}");
+            Console.ResetColor();
+        }
+        public static object AddComputer (ComputerType Type)
+        {
+            switch(Type)
             {
-                case ComputerType.Desktop:
-                    tmp[0] = SetComputerQC(ComputerType.Desktop);
-                    tmp[1] = SetComputerCF(ComputerType.Desktop);
-                    tmp[2] = SetComputerRM(ComputerType.Desktop);
-                    tmp[3] = SetComputerCH(ComputerType.Desktop);
-                    return tmp;
-                    break;
-                case ComputerType.Laptop:
-                    tmp[0] = SetComputerQC(ComputerType.Laptop);
-                    tmp[1] = SetComputerCF(ComputerType.Laptop);
-                    tmp[2] = SetComputerRM(ComputerType.Laptop);
-                    tmp[3] = SetComputerCH(ComputerType.Laptop);
-                    return tmp;
-                    break;
-                case ComputerType.Server:
-                    tmp[0] = SetComputerQC(ComputerType.Server);
-                    tmp[1] = SetComputerCF(ComputerType.Server);
-                    tmp[2] = SetComputerRM(ComputerType.Server);
-                    tmp[3] = SetComputerCH(ComputerType.Server);
-                    return tmp;
-                    break;
-                default: return null; 
-                    break;
-
+                case ComputerType.Desktop:  return new Computer(4, 6, 500, 2500, ComputerType.Desktop); 
+                case ComputerType.Laptop:   return new Computer(2, 4, 250, 1700, ComputerType.Laptop);
+                case ComputerType.Server:   return new Computer(8, 16, 2000, 3000, ComputerType.Server);
+                default: return new Computer();                         
             }
-        }
-    }
+        }                 
+    }    
 }
