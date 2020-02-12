@@ -19,3 +19,4 @@ F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClas
 F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfo.cs
 F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.dll
 F:\WorkSpace\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.pdb
+D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.csprojAssemblyReference.cache
