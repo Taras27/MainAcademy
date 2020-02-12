@@ -4,7 +4,6 @@ D:\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.runtimec
 D:\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.runtimeconfig.dev.json
 D:\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.dll
 D:\MainAcademy\HW_Class_Horyn\UseClass\bin\Debug\netcoreapp3.1\UseClass.pdb
-D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.csprojAssemblyReference.cache
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfoInputs.cache
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.AssemblyInfo.cs
 D:\MainAcademy\HW_Class_Horyn\UseClass\obj\Debug\netcoreapp3.1\UseClass.dll
