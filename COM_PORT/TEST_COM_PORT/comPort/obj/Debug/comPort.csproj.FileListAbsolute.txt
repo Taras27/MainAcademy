@@ -1,0 +1,9 @@
+D:\WorkSpace\TEST_COM_PORT\comPort\bin\Debug\comPort.exe.config
+D:\WorkSpace\TEST_COM_PORT\comPort\bin\Debug\comPort.exe
+D:\WorkSpace\TEST_COM_PORT\comPort\bin\Debug\comPort.pdb
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.csprojAssemblyReference.cache
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.Form1.resources
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.Properties.Resources.resources
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.GenerateResource.cache
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.exe
+D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.pdb
