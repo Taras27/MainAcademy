@@ -7,3 +7,13 @@ D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.Properties.Resources.resour
 D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.GenerateResource.cache
 D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.exe
 D:\WorkSpace\TEST_COM_PORT\comPort\obj\Debug\comPort.pdb
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.exe.config
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.exe
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.pdb
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csprojAssemblyReference.cache
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.Form1.resources
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.Properties.Resources.resources
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.GenerateResource.cache
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.CoreCompileInputs.cache
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.exe
+F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.pdb

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace comPort
     public partial class Form1 : Form
     {
         string DataOut;
+        string DataIn;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +24,8 @@ namespace comPort
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] ports = SerialPort.GetPortNames();
-            comboBoxComPort.Items.AddRange(ports);            
+            comboBoxComPort.Items.AddRange(ports);
+            timer1.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +42,7 @@ namespace comPort
                 progressBar1.Value = 100;
                 button1.Enabled = false;
                 button2.Enabled = true;
+
             }
             catch (Exception err)
             {
@@ -72,6 +76,42 @@ namespace comPort
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+            comboBoxComPort.Items.Clear();
+            comboBoxComPort.Items.AddRange(ports);
+            //textBox2.Text += $"[{DateTime.Now.ToLongTimeString()}] -> Refresh com port list.\r\n";
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+        }
+
+        private void ReadComPort ()
+        {
+            new Thread(() =>
+           {
+               Invoke((MethodInvoker)(()=>
+               {
+                   try
+                   {
+                        DataIn = serialPort1.ReadExisting();
+                        textBox2.Text += $"[{DateTime.Now.ToLongTimeString()}] Received data: -> {DataIn}";
+                   }
+                   catch (TimeoutException ex)
+                   {
+                       MessageBox.Show(ex.Message, "Time out exception!!!");
+                   }
+                  
+               }));
+           }).Start();
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            ReadComPort();            
+        }
     }
 }
