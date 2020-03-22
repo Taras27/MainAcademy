@@ -17,3 +17,12 @@ F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj
 F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.CoreCompileInputs.cache
 F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.exe
 F:\WorkSpace\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.pdb
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.exe.config
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.exe
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\bin\Debug\comPort.pdb
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.Form1.resources
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.Properties.Resources.resources
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csproj.GenerateResource.cache
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.exe
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.pdb
+D:\MainAcademy\COM_PORT\TEST_COM_PORT\comPort\obj\Debug\comPort.csprojAssemblyReference.cache

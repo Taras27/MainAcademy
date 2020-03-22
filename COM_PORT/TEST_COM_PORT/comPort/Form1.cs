@@ -36,7 +36,10 @@ namespace comPort
                 serialPort1.BaudRate = Convert.ToInt32(comboBoxBaudRate.Text);
                 serialPort1.DataBits = Convert.ToInt32(comboBoxDataBits.Text);
                 serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), comboBoxStopBit.Text);
-                serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), comboBoxParity.Text); 
+                serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), comboBoxParity.Text);                
+                serialPort1.ReadTimeout = 500;
+                serialPort1.WriteTimeout = 500;
+
 
                 serialPort1.Open();
                 progressBar1.Value = 100;
@@ -56,7 +59,14 @@ namespace comPort
         {
             if (serialPort1.IsOpen)
             {
-                serialPort1.Close();
+                try
+                {
+                    serialPort1.Close();
+                }
+                catch (Exception)
+                {                    
+                }
+                
                 progressBar1.Value = 0;
                 button1.Enabled = true;
                 button2.Enabled = false;
@@ -89,29 +99,59 @@ namespace comPort
             textBox2.Clear();
         }
 
-        private void ReadComPort ()
+        private void ReadComPort()
         {
             new Thread(() =>
            {
-               Invoke((MethodInvoker)(()=>
+               Invoke((MethodInvoker)(() =>
                {
                    try
                    {
-                        DataIn = serialPort1.ReadExisting();
-                        textBox2.Text += $"[{DateTime.Now.ToLongTimeString()}] Received data: -> {DataIn}";
+                       DataIn = serialPort1.ReadLine();
+                       if (DataIn.Length > 0)
+                       {
+                           textBox2.Text += $"[{DateTime.Now.ToLongTimeString()}] Received data: -> {DataIn} \r\n";
+                       }
                    }
                    catch (TimeoutException ex)
                    {
                        MessageBox.Show(ex.Message, "Time out exception!!!");
                    }
-                  
+
                }));
            }).Start();
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            ReadComPort();            
+            ReadComPort();
+            //DataIn = serialPort1.ReadExisting();
+            //serialPort1.DiscardInBuffer();
+            //this.Invoke(new EventHandler(ReadComPort));
         }
+
+        //private void ReadComPort(object sender, EventArgs ex)
+        //{
+        //    int index = 0;
+        //    string str="";
+        //    char[] tmp = new char[] {'0'};
+        //    index = DataIn.IndexOf("\0", 0);
+        //    if (index > 0 && str != null)
+        //    {
+        //        str = DataIn.Substring(0, index+1);
+        //        tmp = str.ToCharArray();
+        //    }           
+
+        //    textBox2.Text += $"[{DateTime.Now.ToLongTimeString()}]: {str} \r\n";
+
+        //    foreach (var item in tmp)
+        //    {
+        //        int value = Convert.ToInt32(item);
+        //        textBox2.Text += $"0x{value:X},";
+        //    }
+        //    textBox2.Text += "\r\n";
+
+
+        //}
     }
 }
