@@ -12,8 +12,8 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            const string ip = "127.0.0.1";
-            const int port = 10000;
+            const string ip = "192.168.0.150";
+            const int port = 5000;
 
             var tcpEndpoint = new IPEndPoint(IPAddress.Parse(ip), port);
 

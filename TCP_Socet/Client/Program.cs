@@ -12,21 +12,22 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            const string ip = "127.0.0.1";
-            const int port = 10000;
+            const string ip = "192.168.0.150";
+            const int port = 5000;
 
             var tcpEndpoint = new IPEndPoint(IPAddress.Parse(ip), port);
 
             var tcpSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            tcpSocket.Connect(tcpEndpoint);
             while (true)
             {
-                Console.WriteLine("Enter message: ");
-                var message = Console.ReadLine();
+                //Console.WriteLine("Enter message: ");
+                //var message = Console.ReadLine();
 
-                var data = Encoding.UTF8.GetBytes(message);
+                //var data = Encoding.UTF8.GetBytes(message);
 
-                tcpSocket.Connect(tcpEndpoint);
-                tcpSocket.Send(data);
+                
+                //tcpSocket.Send(data);
 
                 var buf = new byte[256];
                 var size = 0;
@@ -34,12 +35,14 @@ namespace Client
 
                 do
                 {
-                    size = tcpSocket.Receive(buf);
+                    size = 0;
+                    size += tcpSocket.Receive(buf);
                     answer.Append(Encoding.UTF8.GetString(buf, 0, size));
+                    
                 }
                 while (tcpSocket.Available > 0);
 
-                Console.WriteLine(answer.ToString());
+                Console.WriteLine($"[{DateTime.Now.ToLongTimeString()}] -> {answer.ToString()}");
                
             }
             tcpSocket.Shutdown(SocketShutdown.Both);
