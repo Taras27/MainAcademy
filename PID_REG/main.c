@@ -10,13 +10,13 @@
 
 #define PID_TAU 0.02f
 
-#define PID_LIM_MIN -10.0f
-#define PID_LIM_MAX  10.0f
+#define PID_LIM_MIN 10.0f
+#define PID_LIM_MAX  100.0f
 
 #define PID_LIM_MIN_INT -5.0f
 #define PID_LIM_MAX_INT  5.0f
 
-#define SAMPLE_TIME_S 0.01f
+#define SAMPLE_TIME_S 1.0f
 
 /* Maximum run-time of simulation */
 #define SIMULATION_TIME_MAX 4.0f
@@ -36,16 +36,19 @@ int main()
     PIDController_Init(&pid);
 
     /* Simulate response using test system */
-    float setpoint = 1.0f;
+    float setpoint = 155.0f;
 
     printf("Time (s)\tSystem Output\tControllerOutput\r\n");
-    for (float t = 0.0f; t <= SIMULATION_TIME_MAX; t += SAMPLE_TIME_S) {
+    for (float t = 30.0f; t <= 200.0f; t += SAMPLE_TIME_S) {
 
         /* Get measurement from system */
         float measurement = TestSystem_Update(pid.out);
 
         /* Compute new control signal */
         PIDController_Update(&pid, setpoint, measurement);
+
+        /*if (measurement >= setpoint)
+            return 0;*/
 
         printf("%f\t%f\t%f\r\n", t, measurement, pid.out);
 
@@ -56,10 +59,10 @@ int main()
 
 float TestSystem_Update(float inp) {
 
-    static float output = 0.0f;
+    static float output;//= 0.0f;
     static const float alpha = 0.02f;
 
-    output = (SAMPLE_TIME_S * inp + output) / (1.0f + alpha * SAMPLE_TIME_S);
+    output += SAMPLE_TIME_S; //(SAMPLE_TIME_S * inp + output) / (1.0f + alpha * SAMPLE_TIME_S);
 
     return output;
 }
