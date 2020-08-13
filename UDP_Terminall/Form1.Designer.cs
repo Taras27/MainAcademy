@@ -47,8 +47,8 @@
             this.labelSensorAz = new System.Windows.Forms.Label();
             this.labelSensorEl = new System.Windows.Forms.Label();
             this.labelSensorPol = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxIp = new System.Windows.Forms.TextBox();
+            this.textBoxPort = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonUdpOpen = new System.Windows.Forms.Button();
@@ -56,21 +56,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonUdpClose = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxSensor = new System.Windows.Forms.GroupBox();
             this.labelSpeedPOL = new System.Windows.Forms.Label();
             this.labelSpeedEL = new System.Windows.Forms.Label();
             this.labelSpeedAZ = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.groupBoxButtons = new System.Windows.Forms.GroupBox();
+            this.radioButtonDown = new System.Windows.Forms.RadioButton();
+            this.radioButtonUp = new System.Windows.Forms.RadioButton();
+            this.radioButtonRight = new System.Windows.Forms.RadioButton();
+            this.radioButtonLeft = new System.Windows.Forms.RadioButton();
+            this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
             this.timerSpeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatus = new System.Windows.Forms.Timer(this.components);
             this.timerUpDateData = new System.Windows.Forms.Timer(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBoxData = new System.Windows.Forms.GroupBox();
             this.labelWindSpeed = new System.Windows.Forms.Label();
-            this.radioButtonLeft = new System.Windows.Forms.RadioButton();
-            this.radioButtonRight = new System.Windows.Forms.RadioButton();
-            this.radioButtonUp = new System.Windows.Forms.RadioButton();
-            this.radioButtonDown = new System.Windows.Forms.RadioButton();
             this.timerLS = new System.Windows.Forms.Timer(this.components);
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -83,9 +83,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAz)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBoxSensor.SuspendLayout();
+            this.groupBoxButtons.SuspendLayout();
+            this.groupBoxData.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -304,19 +304,21 @@
             this.labelSensorPol.TabIndex = 13;
             this.labelSensorPol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBoxIp
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 20);
-            this.textBox1.TabIndex = 14;
+            this.textBoxIp.Location = new System.Drawing.Point(62, 24);
+            this.textBoxIp.Name = "textBoxIp";
+            this.textBoxIp.Size = new System.Drawing.Size(112, 20);
+            this.textBoxIp.TabIndex = 14;
+            this.textBoxIp.Text = "192.168.0.150";
             // 
-            // textBox2
+            // textBoxPort
             // 
-            this.textBox2.Location = new System.Drawing.Point(62, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(53, 20);
-            this.textBox2.TabIndex = 15;
+            this.textBoxPort.Location = new System.Drawing.Point(62, 64);
+            this.textBoxPort.Name = "textBoxPort";
+            this.textBoxPort.Size = new System.Drawing.Size(53, 20);
+            this.textBoxPort.TabIndex = 15;
+            this.textBoxPort.Text = "5001";
             // 
             // label7
             // 
@@ -344,6 +346,7 @@
             this.buttonUdpOpen.TabIndex = 18;
             this.buttonUdpOpen.Text = "Open";
             this.buttonUdpOpen.UseVisualStyleBackColor = true;
+            this.buttonUdpOpen.Click += new System.EventHandler(this.buttonUdpOpen_Click);
             // 
             // trackBarAz
             // 
@@ -360,8 +363,8 @@
             // 
             this.groupBox1.Controls.Add(this.buttonClear);
             this.groupBox1.Controls.Add(this.buttonUdpClose);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxIp);
+            this.groupBox1.Controls.Add(this.textBoxPort);
             this.groupBox1.Controls.Add(this.buttonUdpOpen);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
@@ -390,24 +393,25 @@
             this.buttonUdpClose.TabIndex = 19;
             this.buttonUdpClose.Text = "Close";
             this.buttonUdpClose.UseVisualStyleBackColor = true;
+            this.buttonUdpClose.Click += new System.EventHandler(this.buttonUdpClose_Click);
             // 
-            // groupBox2
+            // groupBoxSensor
             // 
-            this.groupBox2.Controls.Add(this.labelSpeedPOL);
-            this.groupBox2.Controls.Add(this.labelSpeedEL);
-            this.groupBox2.Controls.Add(this.labelSpeedAZ);
-            this.groupBox2.Controls.Add(this.labelSensorEl);
-            this.groupBox2.Controls.Add(label1);
-            this.groupBox2.Controls.Add(label2);
-            this.groupBox2.Controls.Add(this.labelSensorPol);
-            this.groupBox2.Controls.Add(label3);
-            this.groupBox2.Controls.Add(this.labelSensorAz);
-            this.groupBox2.Location = new System.Drawing.Point(12, 11);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(384, 180);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "SENSOR";
+            this.groupBoxSensor.Controls.Add(this.labelSpeedPOL);
+            this.groupBoxSensor.Controls.Add(this.labelSpeedEL);
+            this.groupBoxSensor.Controls.Add(this.labelSpeedAZ);
+            this.groupBoxSensor.Controls.Add(this.labelSensorEl);
+            this.groupBoxSensor.Controls.Add(label1);
+            this.groupBoxSensor.Controls.Add(label2);
+            this.groupBoxSensor.Controls.Add(this.labelSensorPol);
+            this.groupBoxSensor.Controls.Add(label3);
+            this.groupBoxSensor.Controls.Add(this.labelSensorAz);
+            this.groupBoxSensor.Location = new System.Drawing.Point(12, 11);
+            this.groupBoxSensor.Name = "groupBoxSensor";
+            this.groupBoxSensor.Size = new System.Drawing.Size(384, 180);
+            this.groupBoxSensor.TabIndex = 21;
+            this.groupBoxSensor.TabStop = false;
+            this.groupBoxSensor.Text = "SENSOR";
             // 
             // labelSpeedPOL
             // 
@@ -439,100 +443,30 @@
             this.labelSpeedAZ.TabIndex = 14;
             this.labelSpeedAZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox3
+            // groupBoxButtons
             // 
-            this.groupBox3.Controls.Add(this.radioButtonDown);
-            this.groupBox3.Controls.Add(this.radioButtonUp);
-            this.groupBox3.Controls.Add(this.radioButtonRight);
-            this.groupBox3.Controls.Add(this.radioButtonLeft);
-            this.groupBox3.Controls.Add(this.buttonPolRight);
-            this.groupBox3.Controls.Add(label14);
-            this.groupBox3.Controls.Add(this.buttonRight);
-            this.groupBox3.Controls.Add(label13);
-            this.groupBox3.Controls.Add(this.buttonUp);
-            this.groupBox3.Controls.Add(label9);
-            this.groupBox3.Controls.Add(this.buttonDown);
-            this.groupBox3.Controls.Add(this.buttonLeft);
-            this.groupBox3.Controls.Add(this.buttonPolLeft);
-            this.groupBox3.Controls.Add(this.trackBarAz);
-            this.groupBox3.Controls.Add(this.trackBarEl);
-            this.groupBox3.Controls.Add(this.trackBarPol);
-            this.groupBox3.Location = new System.Drawing.Point(402, 11);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(355, 299);
-            this.groupBox3.TabIndex = 24;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Buttons";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 316);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(745, 125);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
-            // 
-            // timerSpeed
-            // 
-            this.timerSpeed.Interval = 50;
-            // 
-            // timerStatus
-            // 
-            this.timerStatus.Interval = 150;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.labelWindSpeed);
-            this.groupBox4.Controls.Add(label4);
-            this.groupBox4.Location = new System.Drawing.Point(258, 204);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(138, 106);
-            this.groupBox4.TabIndex = 26;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "DATA";
-            // 
-            // labelWindSpeed
-            // 
-            this.labelWindSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelWindSpeed.Font = new System.Drawing.Font("Courier New", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWindSpeed.Location = new System.Drawing.Point(6, 56);
-            this.labelWindSpeed.Name = "labelWindSpeed";
-            this.labelWindSpeed.Size = new System.Drawing.Size(126, 41);
-            this.labelWindSpeed.TabIndex = 17;
-            this.labelWindSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radioButtonLeft
-            // 
-            this.radioButtonLeft.AutoSize = true;
-            this.radioButtonLeft.Checked = true;
-            this.radioButtonLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonLeft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonLeft.Location = new System.Drawing.Point(206, 124);
-            this.radioButtonLeft.Name = "radioButtonLeft";
-            this.radioButtonLeft.Size = new System.Drawing.Size(14, 13);
-            this.radioButtonLeft.TabIndex = 24;
-            this.radioButtonLeft.TabStop = true;
-            this.radioButtonLeft.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonRight
-            // 
-            this.radioButtonRight.AutoSize = true;
-            this.radioButtonRight.Location = new System.Drawing.Point(260, 124);
-            this.radioButtonRight.Name = "radioButtonRight";
-            this.radioButtonRight.Size = new System.Drawing.Size(14, 13);
-            this.radioButtonRight.TabIndex = 25;
-            this.radioButtonRight.TabStop = true;
-            this.radioButtonRight.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUp
-            // 
-            this.radioButtonUp.AutoSize = true;
-            this.radioButtonUp.Location = new System.Drawing.Point(232, 100);
-            this.radioButtonUp.Name = "radioButtonUp";
-            this.radioButtonUp.Size = new System.Drawing.Size(14, 13);
-            this.radioButtonUp.TabIndex = 26;
-            this.radioButtonUp.TabStop = true;
-            this.radioButtonUp.UseVisualStyleBackColor = true;
+            this.groupBoxButtons.Controls.Add(this.radioButtonDown);
+            this.groupBoxButtons.Controls.Add(this.radioButtonUp);
+            this.groupBoxButtons.Controls.Add(this.radioButtonRight);
+            this.groupBoxButtons.Controls.Add(this.radioButtonLeft);
+            this.groupBoxButtons.Controls.Add(this.buttonPolRight);
+            this.groupBoxButtons.Controls.Add(label14);
+            this.groupBoxButtons.Controls.Add(this.buttonRight);
+            this.groupBoxButtons.Controls.Add(label13);
+            this.groupBoxButtons.Controls.Add(this.buttonUp);
+            this.groupBoxButtons.Controls.Add(label9);
+            this.groupBoxButtons.Controls.Add(this.buttonDown);
+            this.groupBoxButtons.Controls.Add(this.buttonLeft);
+            this.groupBoxButtons.Controls.Add(this.buttonPolLeft);
+            this.groupBoxButtons.Controls.Add(this.trackBarAz);
+            this.groupBoxButtons.Controls.Add(this.trackBarEl);
+            this.groupBoxButtons.Controls.Add(this.trackBarPol);
+            this.groupBoxButtons.Location = new System.Drawing.Point(402, 11);
+            this.groupBoxButtons.Name = "groupBoxButtons";
+            this.groupBoxButtons.Size = new System.Drawing.Size(355, 299);
+            this.groupBoxButtons.TabIndex = 24;
+            this.groupBoxButtons.TabStop = false;
+            this.groupBoxButtons.Text = "Buttons";
             // 
             // radioButtonDown
             // 
@@ -544,16 +478,86 @@
             this.radioButtonDown.TabStop = true;
             this.radioButtonDown.UseVisualStyleBackColor = true;
             // 
+            // radioButtonUp
+            // 
+            this.radioButtonUp.AutoSize = true;
+            this.radioButtonUp.Location = new System.Drawing.Point(232, 100);
+            this.radioButtonUp.Name = "radioButtonUp";
+            this.radioButtonUp.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonUp.TabIndex = 26;
+            this.radioButtonUp.TabStop = true;
+            this.radioButtonUp.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRight
+            // 
+            this.radioButtonRight.AutoSize = true;
+            this.radioButtonRight.Location = new System.Drawing.Point(260, 124);
+            this.radioButtonRight.Name = "radioButtonRight";
+            this.radioButtonRight.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonRight.TabIndex = 25;
+            this.radioButtonRight.TabStop = true;
+            this.radioButtonRight.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonLeft
+            // 
+            this.radioButtonLeft.AutoSize = true;
+            this.radioButtonLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonLeft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButtonLeft.Location = new System.Drawing.Point(206, 124);
+            this.radioButtonLeft.Name = "radioButtonLeft";
+            this.radioButtonLeft.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonLeft.TabIndex = 24;
+            this.radioButtonLeft.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxLog
+            // 
+            this.richTextBoxLog.Location = new System.Drawing.Point(12, 316);
+            this.richTextBoxLog.Name = "richTextBoxLog";
+            this.richTextBoxLog.Size = new System.Drawing.Size(745, 125);
+            this.richTextBoxLog.TabIndex = 25;
+            this.richTextBoxLog.TabStop = false;
+            this.richTextBoxLog.Text = "";
+            this.richTextBoxLog.TextChanged += new System.EventHandler(this.richTextBoxLog_TextChanged);
+            // 
+            // timerSpeed
+            // 
+            this.timerSpeed.Interval = 50;
+            // 
+            // timerStatus
+            // 
+            this.timerStatus.Interval = 150;
+            // 
+            // groupBoxData
+            // 
+            this.groupBoxData.Controls.Add(this.labelWindSpeed);
+            this.groupBoxData.Controls.Add(label4);
+            this.groupBoxData.Location = new System.Drawing.Point(258, 204);
+            this.groupBoxData.Name = "groupBoxData";
+            this.groupBoxData.Size = new System.Drawing.Size(138, 106);
+            this.groupBoxData.TabIndex = 26;
+            this.groupBoxData.TabStop = false;
+            this.groupBoxData.Text = "DATA";
+            // 
+            // labelWindSpeed
+            // 
+            this.labelWindSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelWindSpeed.Font = new System.Drawing.Font("Courier New", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWindSpeed.Location = new System.Drawing.Point(6, 56);
+            this.labelWindSpeed.Name = "labelWindSpeed";
+            this.labelWindSpeed.Size = new System.Drawing.Size(126, 41);
+            this.labelWindSpeed.TabIndex = 17;
+            this.labelWindSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 453);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxData);
+            this.Controls.Add(this.richTextBoxLog);
+            this.Controls.Add(this.groupBoxButtons);
+            this.Controls.Add(this.groupBoxSensor);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -563,12 +567,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAz)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBoxSensor.ResumeLayout(false);
+            this.groupBoxSensor.PerformLayout();
+            this.groupBoxButtons.ResumeLayout(false);
+            this.groupBoxButtons.PerformLayout();
+            this.groupBoxData.ResumeLayout(false);
+            this.groupBoxData.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -586,24 +590,24 @@
         private System.Windows.Forms.Label labelSensorAz;
         private System.Windows.Forms.Label labelSensorEl;
         private System.Windows.Forms.Label labelSensorPol;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxIp;
+        private System.Windows.Forms.TextBox textBoxPort;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonUdpOpen;
         private System.Windows.Forms.TrackBar trackBarAz;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxSensor;
+        private System.Windows.Forms.GroupBox groupBoxButtons;
         private System.Windows.Forms.Button buttonUdpClose;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxLog;
         private System.Windows.Forms.Timer timerSpeed;
         private System.Windows.Forms.Timer timerStatus;
         private System.Windows.Forms.Timer timerUpDateData;
         private System.Windows.Forms.Label labelSpeedAZ;
         private System.Windows.Forms.Label labelSpeedPOL;
         private System.Windows.Forms.Label labelSpeedEL;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBoxData;
         private System.Windows.Forms.Label labelWindSpeed;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.RadioButton radioButtonDown;

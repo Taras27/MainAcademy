@@ -4,9 +4,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Threading;
-
-
-
+using System.Text;
 
 namespace UDP_Terminall
 {    
@@ -19,17 +17,22 @@ namespace UDP_Terminall
         const byte dirCC = 0x00;
         const byte dirCCW = 0x01;
 
+        static IPEndPoint RemoteAddress = new IPEndPoint(0, 0); 
+        static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+        static EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.151"), 10000);
+        static Thread receiveThread = new Thread(ReceiveMessage);
+
         int speedValueAz, speedValueEl, speedValuePol;
         int speedValueRealAz, speedValueRealEl, speedValueRealPol;
         float sensorValueAzF, sensorValueWindF, sensorValueElF, sensorValuePolF;
-        int sensorValueEl, sensorValuePol;
-        static readonly IPEndPoint RemoteAddress = new IPEndPoint(IPAddress.Parse("192.168.0.150"), 5001);
-        
+        int sensorValueEl, sensorValuePol;              
         static byte[] data = new byte[256];
-        int bytes;
+        static int bytes;
         byte[] tranceivedData = new byte[256];
-        string message;
+        static string message;
         int counter = 0;
+
+        #region buttons
 
         private void buttonUp_MouseDown(object sender, MouseEventArgs e)
         {
@@ -43,6 +46,8 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonUp_MouseUp(object sender, MouseEventArgs e)
@@ -55,6 +60,8 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n"; 
         }
 
         private void buttonDown_MouseDown(object sender, MouseEventArgs e)
@@ -69,6 +76,7 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonDown_MouseUp(object sender, MouseEventArgs e)
@@ -81,6 +89,8 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n";
         }
 
         private void buttonLeft_MouseDown(object sender, MouseEventArgs e)
@@ -95,6 +105,8 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonLeft_MouseUp(object sender, MouseEventArgs e)
@@ -107,6 +119,8 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n";
         }
 
         private void buttonRight_MouseDown(object sender, MouseEventArgs e)
@@ -121,6 +135,8 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonRight_MouseUp(object sender, MouseEventArgs e)
@@ -133,6 +149,8 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n";
         }
 
         private void buttonPolRight_MouseDown(object sender, MouseEventArgs e)
@@ -147,6 +165,8 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonPolRight_MouseUp(object sender, MouseEventArgs e)
@@ -159,6 +179,8 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n";
         }
 
         private void buttonPolLeft_MouseDown(object sender, MouseEventArgs e)
@@ -173,6 +195,8 @@ namespace UDP_Terminall
             tranceivedData[7] = (byte)CRC(tranceivedData, 7);
 
             SendMessage(tranceivedData, 8);
+
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 8) + "\r\n";
         }
 
         private void buttonPolLeft_MouseUp(object sender, MouseEventArgs e)
@@ -185,11 +209,13 @@ namespace UDP_Terminall
             tranceivedData[5] = (byte)CRC(tranceivedData, 5);
 
             SendMessage(tranceivedData, 6);
-        }
 
+            richTextBoxLog.Text += "[" + DateTime.Now + "]" + " Transeived data -> " + BitConverter.ToString(tranceivedData, 0, 6) + "\r\n";
+        }
+        #endregion
         private void buttonClear_MouseUp(object sender, MouseEventArgs e)
         {
-            richTextBox1.Clear();
+            richTextBoxLog.Clear();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -197,35 +223,112 @@ namespace UDP_Terminall
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
+        
+       
         public Form1()
         {
             InitializeComponent();
-            timerSpeed.Enabled = true;
+            
             timerSpeed.Interval = 100;
             timerSpeed.Tick += TimerSpeed_Tick;
 
-            timerUpDateData.Enabled = true;
+            
             timerUpDateData.Interval = 50;
             timerUpDateData.Tick += TimerUpDateData_Tick;
 
+            timerStatus.Interval = 200;
+            timerStatus.Tick += TimerStatus_Tick;
+
+            timerLS.Interval = 500;
+            timerLS.Tick += timerLS_tTick;           
+
+            groupBoxButtons.Enabled = false;
+            groupBoxSensor.Enabled = false;
+            groupBoxData.Enabled = false;           
+
+        }
+
+        private void buttonUdpOpen_Click(object sender, EventArgs e)
+        {
             try
             {
-                Thread receiveThread = new Thread(ReceiveMessage);
-                receiveThread.Start();                
+                RemoteAddress.Address = IPAddress.Parse(textBoxIp.Text);
+                RemoteAddress.Port = Convert.ToInt32(textBoxPort.Text);
+                timerLS.Enabled = true;
+                timerStatus.Enabled = true;
+                timerUpDateData.Enabled = true;
+                timerSpeed.Enabled = true;
+
+                groupBoxButtons.Enabled = true;
+                groupBoxSensor.Enabled = true;
+                groupBoxData.Enabled = true;
+
+                try
+                {
+                    socket.Bind(remoteIp);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                try
+                {                    
+                    receiveThread.Start();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void buttonUdpClose_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                timerLS.Enabled = false;
+                timerStatus.Enabled = false;
+                timerUpDateData.Enabled = false;
+                timerSpeed.Enabled = false;
+
+                groupBoxButtons.Enabled = false;
+                groupBoxSensor.Enabled = false;
+                groupBoxData.Enabled = false;
+
+
+
+                try
+                {          
+                    socket.Shutdown(SocketShutdown.Both);                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    socket.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }           
+                receiveThread.Abort();
+            }
+        }
 
-            timerStatus.Enabled = true;
-            timerStatus.Interval = 200;
-            timerStatus.Tick += TimerStatus_Tick;
-
-            timerLS.Enabled = true;
-            timerLS.Interval = 500;
-            timerLS.Tick += timerLS_tTick;
-
+        private void richTextBoxLog_TextChanged(object sender, EventArgs e)
+        {           
+            // set the current caret position to the end
+            richTextBoxLog.SelectionStart = richTextBoxLog.Text.Length;
+            // scroll it automatically
+            richTextBoxLog.ScrollToCaret();           
         }
 
         private void timerLS_tTick(object sender, EventArgs e)
@@ -399,7 +502,7 @@ namespace UDP_Terminall
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -407,40 +510,20 @@ namespace UDP_Terminall
             }
         }
 
-        private void ReceiveMessage()
-        {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.151"), 10000);
-
+        private static void ReceiveMessage()
+        {   
             try
             {
-                socket.Bind(remoteIp);
-            
-                try
+                while (true)
                 {
-                    while (true)
-                    {
-                        bytes = socket.ReceiveFrom(data, ref remoteIp);
-                        message = BitConverter.ToString(data, 0, bytes);                    
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    socket.Close();
+                    bytes = socket.ReceiveFrom(data, ref remoteIp);
+                    message = BitConverter.ToString(data, 0, bytes);                    
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                socket.Close();
-            }
+                MessageBox.Show(ex.Message);
+            }          
         }
         
         private int CRC(byte[] data, int lenght)
