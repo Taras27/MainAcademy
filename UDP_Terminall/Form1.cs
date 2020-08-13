@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Threading;
 using System.Text;
+using System.Diagnostics;
 
 namespace UDP_Terminall
 {    
@@ -19,7 +20,7 @@ namespace UDP_Terminall
 
         static IPEndPoint RemoteAddress = new IPEndPoint(0, 0); 
         static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-        static EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.151"), 10000);
+        static EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.16"), 10000);
         static Thread receiveThread = new Thread(ReceiveMessage);
 
         int speedValueAz, speedValueEl, speedValuePol;
@@ -220,7 +221,7 @@ namespace UDP_Terminall
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Process.GetCurrentProcess().Kill();
         }
 
         
@@ -271,10 +272,10 @@ namespace UDP_Terminall
                 {
                     MessageBox.Show(ex.Message);
                 }
-
                 try
-                {                    
-                    receiveThread.Start();
+                {
+                    if(receiveThread.ThreadState == System.Threading.ThreadState.Suspended)
+                        receiveThread.Resume();
                 }
                 catch (Exception ex)
                 {
@@ -301,33 +302,29 @@ namespace UDP_Terminall
                 groupBoxSensor.Enabled = false;
                 groupBoxData.Enabled = false;
 
-
-
                 try
                 {          
-                    socket.Shutdown(SocketShutdown.Both);                    
+                    socket.Disconnect(true);
+                    receiveThread.Suspend();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                finally
-                {
-                    socket.Close();
-                }
+                //finally
+                //{
+                //    socket.Close();
+                //}
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                receiveThread.Abort();
             }
         }
 
         private void richTextBoxLog_TextChanged(object sender, EventArgs e)
         {           
-            // set the current caret position to the end
-            richTextBoxLog.SelectionStart = richTextBoxLog.Text.Length;
-            // scroll it automatically
+            richTextBoxLog.SelectionStart = richTextBoxLog.Text.Length;           
             richTextBoxLog.ScrollToCaret();           
         }
 
