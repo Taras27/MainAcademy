@@ -20,7 +20,7 @@ namespace UDP_Terminall
 
         static IPEndPoint RemoteAddress = new IPEndPoint(0, 0); 
         static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-        static EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.16"), 10000);
+        static EndPoint remoteIp = new IPEndPoint(IPAddress.Parse("192.168.0.151"), 10000);
         static Thread receiveThread = new Thread(ReceiveMessage);
 
         int speedValueAz, speedValueEl, speedValuePol;
@@ -274,8 +274,7 @@ namespace UDP_Terminall
                 }
                 try
                 {
-                    if(receiveThread.ThreadState == System.Threading.ThreadState.Suspended)
-                        receiveThread.Resume();
+                    receiveThread.Start();
                 }
                 catch (Exception ex)
                 {
