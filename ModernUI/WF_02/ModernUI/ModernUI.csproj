@@ -63,11 +63,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="usHelp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="usHelp.Designer.cs">
+      <DependentUpon>usHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usHome.Designer.cs">
+      <DependentUpon>usHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usOther.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usOther.Designer.cs">
+      <DependentUpon>usOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usSetting.Designer.cs">
+      <DependentUpon>usSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usTools.Designer.cs">
+      <DependentUpon>usTools.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -82,8 +106,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="usHelp.resx">
+      <DependentUpon>usHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usHome.resx">
+      <DependentUpon>usHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usOther.resx">
+      <DependentUpon>usOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usSetting.resx">
+      <DependentUpon>usSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usTools.resx">
+      <DependentUpon>usTools.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

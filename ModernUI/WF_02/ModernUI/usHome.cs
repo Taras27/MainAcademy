@@ -16,6 +16,15 @@ namespace ModernUI
         {
             InitializeComponent();
         }
-        
+
+        private void usHome_Load(object sender, EventArgs e)
+        {
+            pbDown.Hide();
+            pbTop.Hide();
+            pbLeft.Hide();
+            pbRight.Hide();
+            pbPolRight.Hide();
+            pbPolLeft.Hide();
+        }
     }
 }
