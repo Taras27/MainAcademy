@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TimerTle = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label3
@@ -42,13 +46,36 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "OTHER";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.DarkGray;
+            this.button1.Location = new System.Drawing.Point(316, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "refreshTLE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.textBox1.Location = new System.Drawing.Point(32, 153);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(278, 20);
+            this.textBox1.TabIndex = 12;
+            // 
             // usOther
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Name = "usOther";
             this.Size = new System.Drawing.Size(778, 502);
+            this.Load += new System.EventHandler(this.usOther_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,5 +84,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer TimerTle;
     }
 }

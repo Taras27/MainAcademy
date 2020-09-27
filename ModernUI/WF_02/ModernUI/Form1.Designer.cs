@@ -1,6 +1,6 @@
 ﻿namespace ModernUI
 {
-    partial class Form1
+    partial class Form1 : MetroFramework.Forms.MetroForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -39,11 +39,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.usTools1 = new ModernUI.usTools();
-            this.usHome1 = new ModernUI.usHome();
-            this.usHelp1 = new ModernUI.usHelp();
-            this.usOther1 = new ModernUI.usOther();
-            this.usSetting1 = new ModernUI.usSetting();
+            this.us_Tools = new ModernUI.usTools();
+            this.us_Home = new ModernUI.usHome();
+            this.us_Help = new ModernUI.usHelp();
+            this.us_Other = new ModernUI.usOther();
+            this.us_Setting = new ModernUI.usSetting();
             this.mPanel.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -56,11 +56,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mPanel.Controls.Add(this.usTools1);
-            this.mPanel.Controls.Add(this.usHome1);
-            this.mPanel.Controls.Add(this.usHelp1);
-            this.mPanel.Controls.Add(this.usOther1);
-            this.mPanel.Controls.Add(this.usSetting1);
+            this.mPanel.Controls.Add(this.us_Tools);
+            this.mPanel.Controls.Add(this.us_Home);
+            this.mPanel.Controls.Add(this.us_Help);
+            this.mPanel.Controls.Add(this.us_Other);
+            this.mPanel.Controls.Add(this.us_Setting);
             this.mPanel.HorizontalScrollbarBarColor = true;
             this.mPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.mPanel.HorizontalScrollbarSize = 10;
@@ -243,48 +243,48 @@
             // 
             // usTools1
             // 
-            this.usTools1.Location = new System.Drawing.Point(3, 4);
-            this.usTools1.Name = "usTools1";
-            this.usTools1.Size = new System.Drawing.Size(778, 502);
-            this.usTools1.TabIndex = 3;
+            this.us_Tools.Location = new System.Drawing.Point(3, 4);
+            this.us_Tools.Name = "usTools1";
+            this.us_Tools.Size = new System.Drawing.Size(778, 502);
+            this.us_Tools.TabIndex = 3;
             // 
             // usHome1
             // 
-            this.usHome1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.us_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.usHome1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.usHome1.ForeColor = System.Drawing.Color.Transparent;
-            this.usHome1.Location = new System.Drawing.Point(3, 4);
-            this.usHome1.Name = "usHome1";
-            this.usHome1.Padding = new System.Windows.Forms.Padding(10);
-            this.usHome1.Size = new System.Drawing.Size(774, 498);
-            this.usHome1.TabIndex = 2;
+            this.us_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.us_Home.ForeColor = System.Drawing.Color.Transparent;
+            this.us_Home.Location = new System.Drawing.Point(3, 4);
+            this.us_Home.Name = "usHome1";
+            this.us_Home.Padding = new System.Windows.Forms.Padding(10);
+            this.us_Home.Size = new System.Drawing.Size(774, 498);
+            this.us_Home.TabIndex = 2;
             // 
             // usHelp1
             // 
-            this.usHelp1.Location = new System.Drawing.Point(3, 4);
-            this.usHelp1.Name = "usHelp1";
-            this.usHelp1.Padding = new System.Windows.Forms.Padding(10);
-            this.usHelp1.Size = new System.Drawing.Size(778, 502);
-            this.usHelp1.TabIndex = 6;
+            this.us_Help.Location = new System.Drawing.Point(3, 4);
+            this.us_Help.Name = "usHelp1";
+            this.us_Help.Padding = new System.Windows.Forms.Padding(10);
+            this.us_Help.Size = new System.Drawing.Size(778, 502);
+            this.us_Help.TabIndex = 6;
             // 
             // usOther1
             // 
-            this.usOther1.Location = new System.Drawing.Point(3, 4);
-            this.usOther1.Name = "usOther1";
-            this.usOther1.Size = new System.Drawing.Size(778, 502);
-            this.usOther1.TabIndex = 5;
+            this.us_Other.Location = new System.Drawing.Point(3, 4);
+            this.us_Other.Name = "usOther1";
+            this.us_Other.Size = new System.Drawing.Size(778, 502);
+            this.us_Other.TabIndex = 5;
             // 
             // usSetting1
             // 
-            this.usSetting1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.usSetting1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.usSetting1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.usSetting1.Location = new System.Drawing.Point(3, 4);
-            this.usSetting1.Name = "usSetting1";
-            this.usSetting1.Size = new System.Drawing.Size(774, 498);
-            this.usSetting1.TabIndex = 4;
+            this.us_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.us_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.us_Setting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.us_Setting.Location = new System.Drawing.Point(3, 4);
+            this.us_Setting.Name = "usSetting1";
+            this.us_Setting.Size = new System.Drawing.Size(774, 498);
+            this.us_Setting.TabIndex = 4;
             // 
             // Form1
             // 
@@ -322,11 +322,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private usHome usHome1;
-        private usHelp usHelp1;
-        private usOther usOther1;
-        private usSetting usSetting1;
-        private usTools usTools1;
+        public usHome us_Home;
+        public usHelp us_Help;
+        public usOther us_Other;
+        public usSetting us_Setting;
+        public usTools us_Tools;
     }
 }
 

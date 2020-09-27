@@ -6,12 +6,13 @@ using System.Windows.Forms;
 
 namespace ModernUI
 {
-    static class Program
-    {
+    
+    class Program
+    {        
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
-        [STAThread]
+        [STAThread]        
         static void Main()
         {
             Application.EnableVisualStyles();
