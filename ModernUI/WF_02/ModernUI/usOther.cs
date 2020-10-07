@@ -13,7 +13,7 @@ namespace ModernUI
 {
     public partial class usOther : UserControl
     {
-        
+        formTleLoad formTle;
         public usOther()
         {
             InitializeComponent();
@@ -37,15 +37,16 @@ namespace ModernUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Thread downloadTLE_Thread = new Thread(new ThreadStart(openForm));
-            downloadTLE_Thread.Start();
+            DataBase.Link = textBox1.Text;
+            openForm();           
         }
 
         private void openForm()
         {
             try
             {
-                Application.Run(new formTleLoad());
+                formTle = new formTleLoad();
+                formTle.ShowDialog(this);
             }
             catch (Exception)
             {
@@ -53,6 +54,6 @@ namespace ModernUI
                          MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
            
-        }
+        }        
     }
 }

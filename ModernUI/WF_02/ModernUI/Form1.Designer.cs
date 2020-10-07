@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.mPanel = new MetroFramework.Controls.MetroPanel();
+            this.us_Tools = new ModernUI.usTools();
+            this.us_Home = new ModernUI.usHome();
+            this.us_Help = new ModernUI.usHelp();
+            this.us_Other = new ModernUI.usOther();
+            this.us_Setting = new ModernUI.usSetting();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.us_Tools = new ModernUI.usTools();
-            this.us_Home = new ModernUI.usHome();
-            this.us_Help = new ModernUI.usHelp();
-            this.us_Other = new ModernUI.usOther();
-            this.us_Setting = new ModernUI.usSetting();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.mPanel.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mPanel
@@ -73,6 +73,52 @@
             this.mPanel.VerticalScrollbarHighlightOnWheel = false;
             this.mPanel.VerticalScrollbarSize = 10;
             // 
+            // us_Tools
+            // 
+            this.us_Tools.BackColor = System.Drawing.Color.Transparent;
+            this.us_Tools.Location = new System.Drawing.Point(3, 4);
+            this.us_Tools.Name = "us_Tools";
+            this.us_Tools.Size = new System.Drawing.Size(778, 502);
+            this.us_Tools.TabIndex = 3;
+            // 
+            // us_Home
+            // 
+            this.us_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.us_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.us_Home.ForeColor = System.Drawing.Color.Transparent;
+            this.us_Home.Location = new System.Drawing.Point(3, 4);
+            this.us_Home.Name = "us_Home";
+            this.us_Home.Padding = new System.Windows.Forms.Padding(10);
+            this.us_Home.Size = new System.Drawing.Size(774, 498);
+            this.us_Home.TabIndex = 2;
+            // 
+            // us_Help
+            // 
+            this.us_Help.Location = new System.Drawing.Point(3, 4);
+            this.us_Help.Name = "us_Help";
+            this.us_Help.Padding = new System.Windows.Forms.Padding(10);
+            this.us_Help.Size = new System.Drawing.Size(778, 502);
+            this.us_Help.TabIndex = 6;
+            // 
+            // us_Other
+            // 
+            this.us_Other.Location = new System.Drawing.Point(3, 4);
+            this.us_Other.Name = "us_Other";
+            this.us_Other.Size = new System.Drawing.Size(778, 502);
+            this.us_Other.TabIndex = 5;
+            // 
+            // us_Setting
+            // 
+            this.us_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.us_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.us_Setting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.us_Setting.Location = new System.Drawing.Point(3, 4);
+            this.us_Setting.Name = "us_Setting";
+            this.us_Setting.Size = new System.Drawing.Size(774, 498);
+            this.us_Setting.TabIndex = 4;
+            // 
             // metroPanel1
             // 
             this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -97,36 +143,6 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel2.Controls.Add(this.label1);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(279, 63);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(782, 80);
-            this.metroPanel2.TabIndex = 4;
-            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 55);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "HOME";
             // 
             // pictureBox1
             // 
@@ -241,50 +257,35 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // usTools1
+            // metroPanel2
             // 
-            this.us_Tools.Location = new System.Drawing.Point(3, 4);
-            this.us_Tools.Name = "usTools1";
-            this.us_Tools.Size = new System.Drawing.Size(778, 502);
-            this.us_Tools.TabIndex = 3;
-            // 
-            // usHome1
-            // 
-            this.us_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.us_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.us_Home.ForeColor = System.Drawing.Color.Transparent;
-            this.us_Home.Location = new System.Drawing.Point(3, 4);
-            this.us_Home.Name = "usHome1";
-            this.us_Home.Padding = new System.Windows.Forms.Padding(10);
-            this.us_Home.Size = new System.Drawing.Size(774, 498);
-            this.us_Home.TabIndex = 2;
+            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel2.Controls.Add(this.label1);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(279, 63);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(782, 80);
+            this.metroPanel2.TabIndex = 4;
+            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // usHelp1
+            // label1
             // 
-            this.us_Help.Location = new System.Drawing.Point(3, 4);
-            this.us_Help.Name = "usHelp1";
-            this.us_Help.Padding = new System.Windows.Forms.Padding(10);
-            this.us_Help.Size = new System.Drawing.Size(778, 502);
-            this.us_Help.TabIndex = 6;
-            // 
-            // usOther1
-            // 
-            this.us_Other.Location = new System.Drawing.Point(3, 4);
-            this.us_Other.Name = "usOther1";
-            this.us_Other.Size = new System.Drawing.Size(778, 502);
-            this.us_Other.TabIndex = 5;
-            // 
-            // usSetting1
-            // 
-            this.us_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.us_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.us_Setting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.us_Setting.Location = new System.Drawing.Point(3, 4);
-            this.us_Setting.Name = "usSetting1";
-            this.us_Setting.Size = new System.Drawing.Size(774, 498);
-            this.us_Setting.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 55);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "HOME";
             // 
             // Form1
             // 
@@ -303,9 +304,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mPanel.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
