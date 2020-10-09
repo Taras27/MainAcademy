@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usHome));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.pbPolLeft = new System.Windows.Forms.PictureBox();
@@ -72,6 +73,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPolLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPolRight)).BeginInit();
@@ -190,6 +192,7 @@
             this.metroButton8.Name = "metroButton8";
             this.metroButton8.Size = new System.Drawing.Size(75, 75);
             this.metroButton8.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.metroButton8, "Stop move for all axis");
             this.metroButton8.UseSelectable = true;
             // 
             // metroButton5
@@ -203,6 +206,7 @@
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(75, 75);
             this.metroButton5.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.metroButton5, "Drive elevation down");
             this.metroButton5.UseSelectable = true;
             // 
             // metroButton6
@@ -216,6 +220,7 @@
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.Size = new System.Drawing.Size(75, 75);
             this.metroButton6.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.metroButton6, "Drive polarization right");
             this.metroButton6.UseSelectable = true;
             // 
             // metroButton7
@@ -229,6 +234,7 @@
             this.metroButton7.Name = "metroButton7";
             this.metroButton7.Size = new System.Drawing.Size(75, 75);
             this.metroButton7.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.metroButton7, "Drive polarization left");
             this.metroButton7.UseSelectable = true;
             // 
             // metroButton4
@@ -242,6 +248,7 @@
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(75, 75);
             this.metroButton4.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.metroButton4, "Drive elevation up");
             this.metroButton4.UseSelectable = true;
             // 
             // metroButton2
@@ -255,7 +262,9 @@
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 75);
             this.metroButton2.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.metroButton2, "Table drive");
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
@@ -268,7 +277,9 @@
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(75, 75);
             this.metroButton3.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.metroButton3, "Drive to position");
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroButton1
             // 
@@ -281,6 +292,7 @@
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 75);
             this.metroButton1.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.metroButton1, "Drive azimuth right");
             this.metroButton1.UseSelectable = true;
             // 
             // btnLeft
@@ -294,6 +306,7 @@
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(75, 75);
             this.btnLeft.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnLeft, "Drive azimuth left");
             this.btnLeft.UseSelectable = true;
             // 
             // metroPanel2
@@ -364,6 +377,7 @@
             this.metroPanel3.Style = MetroFramework.MetroColorStyle.Red;
             this.metroPanel3.TabIndex = 2;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.toolTip1.SetToolTip(this.metroPanel3, "Signal from beacon receiver");
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
@@ -479,6 +493,7 @@
             this.toolStripDropDownButton1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 37);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.ToolTipText = "Wind sensor data";
             // 
             // windSpeedToolStripMenuItem
             // 
@@ -498,6 +513,7 @@
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 37);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.ToolTipText = "Tenmperature sensors data";
             // 
             // humidityToolStripMenuItem
             // 
@@ -607,6 +623,11 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "AZ";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Help";
+            // 
             // usHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,5 +705,6 @@
         public System.Windows.Forms.ToolStripMenuItem insideTemperatureToolStripMenuItem;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
