@@ -1,0 +1,4 @@
+Record=DiagramHierarchy|SourceDocument=MultiBoard_PS.MbsDoc|Kind=Multi-board Schematic Module|Designator=Secondary|Source=..\KeyBoard\KeyBoardProject.PrjPcb
+Record=SubProject|SourceDocument=MultiBoard_PS.MbsDoc|ProjectPath=..\KeyBoard\KeyBoardProject.PrjPcb
+Record=DiagramHierarchy|SourceDocument=MultiBoard_PS.MbsDoc|Kind=Multi-board Schematic Module|Designator=Main|Source=..\MotherBoard\MCU_PS.PrjPcb
+Record=SubProject|SourceDocument=MultiBoard_PS.MbsDoc|ProjectPath=..\MotherBoard\MCU_PS.PrjPcb
