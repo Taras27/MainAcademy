@@ -59,6 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="DriveTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriveTable.Designer.cs">
+      <DependentUpon>DriveTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriveTo.Designer.cs">
+      <DependentUpon>DriveTo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     <Compile Include="usTools.Designer.cs">
       <DependentUpon>usTools.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DriveTable.resx">
+      <DependentUpon>DriveTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriveTo.resx">
+      <DependentUpon>DriveTo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

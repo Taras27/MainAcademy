@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace ModernUI
 {
+    
     public partial class usHome : UserControl
     {
+        DriveTable driveTable = null;
+        DriveTo driveTo = null;
         public usHome()
         {
             InitializeComponent();
@@ -25,6 +28,18 @@ namespace ModernUI
             pbRight.Hide();
             pbPolRight.Hide();
             pbPolLeft.Hide();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)//table
+        {
+            driveTable = new DriveTable();
+            driveTable.ShowDialog(this);
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)//driveTo
+        {
+            driveTo = new DriveTo();
+            driveTo.ShowDialog(this);
         }
     }
 }
